@@ -88,7 +88,7 @@ Ext.define('Ext.ux.plugin.TreeBufferedRenderer', {
 			});
 
 			me.tree.getRootNode().cascadeBy(function(childRecord) {
-				if(!childRecord.isLeaf())
+				if(childRecord != root && !childRecord.isLeaf())
 					childRecord.data.expanded = false;
 			});
 
@@ -146,16 +146,5 @@ Ext.define('Ext.ux.plugin.TreeBufferedRenderer', {
 
 		me.view.el.dom.scrollTop = scrollTop;
 		return false;
-	},
-
-
-	bindStore : function(store) {
-		var me = this;
-
-		this.callParent(arguments);
-
-		store.getTotalCount = function() {
-			return this.data.items.length;
-		}
 	}
 });
