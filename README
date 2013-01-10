@@ -2,5 +2,7 @@ This is a plugin for ExtJS 4.2 Beta 2
 
 The plugin extend the new buffered functionalities for the treepanel, because the expand and collapse functionalities are too slow
 
+Extends colapsing, expanding, collapseAll, expandAll.
+
 Checkout the example and don't forget to set the ExtJS 4.2 Beta 2 paths.
 http://www.sencha.com/forum/showthread.php?253467-Ext-JS-4.2.0-Beta-2-Now-Available
