@@ -125,7 +125,7 @@ Ext.define('Ext.ux.plugin.TreeBufferedRenderer', {
 			scrollTop = me.scrollTop;
 
 		record.cascadeBy(function(childRecord){
-			if(childRecord != record){
+			if(childRecord != record && childRecord.isVisible()){
 				if(childRecord.parentNode.data.expanded)
 					itemCount++;
 			}
